@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300|Source+Sans+Pro:400,300);
+
+
+
+/* FONTS/COLORS
+============================================= */
+
+$title: 'Oswald', Helvetica, serif;
+
+
+$green: #86AC41;
+$olive: #4B7447;
+
+
+
+/* REGULAR MIXINS
+============================================= */
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+
+
+/* MIXINS FOR RESPONSIVENESS
+============================================= */
+
+$phone-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin phone {
+  @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-and-under {
+  @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}

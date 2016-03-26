@@ -1,0 +1,59 @@
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  background-color: transparent;
+}
+
+#vertical {
+  background-color: #222;
+  height: 100%;
+  text-align: center;
+  margin: 0;
+  font: .9em $title;
+  position: absolute;
+  border-radius: 0;
+
+  a {
+    color: $green;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+      color: $olive;
+      @include transition(all .5s ease);
+    }
+
+    &:active, &:focus {
+      background-color: transparent;
+    }
+  }
+
+
+  ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
+   color: red;
+  }
+
+  .form-control {
+    background-color: rgba(255,255,255,.1);
+    border: 0px solid transparent;
+    border-radius: 0px;
+  }
+
+  .btn-default {
+    background-color: $green;
+    color: #222;
+    border: 0px solid transparent;
+    margin-top: 10px;
+    font-size: .8em;
+    text-transform: uppercase;
+    border-radius: 0;
+
+    &:hover {
+      background-color: $olive;
+      @include transition(all .5s ease);
+    }
+  }
+}
+
+#links {
+  position: relative;
+  top: 20%;
+}
