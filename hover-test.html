@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<style>
+figure {
+  /*overflow: hidden;*/
+  position: absolute;
+}
+
+figure:hover figcaption {
+  -webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figcaption {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  width: 100%;
+  position: relative;
+  top: -52px;
+  height: 3.75em;
+  background: #fff;
+  color: #3c4a50;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0,100%,0);
+  transform: translate3d(0,100%,0);
+}
+
+figure p {
+  color: green;
+  -webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,200%,0);
+	transform: translate3d(0,200%,0);
+  padding: 0 1em;
+}
+.row {overflow:auto; float:left !important;}
+</style>
+
+
+<div class="container" id="grid">
+	<div class="row">
+		<figure>
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+			<img src="../../unsplash/forest.jpg">
+			<figcaption>
+				<p>hi it me</p>
+			</figcaption>
+		</div>
+	</figure>
+	</div>
+</div>

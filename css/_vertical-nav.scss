@@ -17,21 +17,22 @@
     overflow-x: visible;
   }
 
-  .navbar {
-	  max-width: 15vw;
-	  margin-right: 0;
-	  margin-left: 0;
-  }
+.navbar
+{
+	max-width: 175px;
+	margin-right: 0;
+	margin-left: 0;
+}
 
-  .navbar-nav, .navbar-nav > li, .navbar-left, .navbar-right, .navbar-header {
-    float:none !important;
-  }
+.navbar-nav,
+.navbar-nav > li,
+.navbar-left,
+.navbar-right,
+.navbar-header
+{float:none !important;}
 
-  .navbar-right .dropdown-menu {
-    left:0;
-    right:auto;
-  }
-  .navbar-collapse .navbar-nav.navbar-right:last-child {
+.navbar-right .dropdown-menu {left:0;right:auto;}
+.navbar-collapse .navbar-nav.navbar-right:last-child {
     margin-right: 0;
-  }
+}
 }
