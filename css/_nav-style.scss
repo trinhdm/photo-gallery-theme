@@ -7,10 +7,12 @@
   height: 100%;
   text-align: center;
   margin: 0;
-  font: .9em $title;
+  font: .9em $body-font;
   border-radius: 0;
   float: left;
   position: fixed;
+  top: 0;
+  left: 0;
   border: 0px solid transparent;
   z-index: 100;
 
@@ -64,9 +66,10 @@
 }
 
 #links {
-  position: relative;
+  position: fixed;
   top: 20%;
   height: 100% !important;
+  width: 175px !important;
 
   .navbar-nav {
     height: 100%;

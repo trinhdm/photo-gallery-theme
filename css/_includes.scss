@@ -1,15 +1,27 @@
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,300|Source+Sans+Pro:400,300);
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,300|Source+Sans+Pro:400,300);
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'feathericons';
+	src:url('../fonts/feather-webfont.eot');
+	src:url('../fonts/feather-webfont.eot') format('embedded-opentype'),
+		url('../fonts/feather-webfont.woff') format('woff'),
+		url('../fonts/feather-webfont.ttf') format('truetype'),
+		url('.../fonts/feather-webfont.svg') format('svg');
+}
 
 
 
 /* FONTS/COLORS
 ============================================= */
 
-$title: 'Oswald', Helvetica, serif;
+$title-font: 'Oxygen', Helvetica, sans-serif;
+$body-font: 'Source Sans Pro', Helvetica, sans-serif;
 
 
 $green: #86AC41;
 $olive: #4B7447;
+$gray: #222;
 
 
 

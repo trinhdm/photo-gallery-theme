@@ -26,25 +26,32 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#">Photo Gallery</a>
+
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse" id="links">
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">About</a></li>
-      <li><a href="#">Gallery</a></li>
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery</a>
         <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li><a href="#">Separated link</a></li>
-          <li><a href="#">One more separated link</a></li>
+					<li><b>Categories</b></li>
+          <li><a href="#">All</a></li>
+          <li><a href="#">Nature</a></li>
+          <li><a href="#">City</a></li>
+          <li><a href="#">Animals</a></li>
         </ul>
       </li>
-      <form class="navbar-form navbar-left" role="search">
+			<li><a href="#">Contact</a></li>
+
+			<div class="button-group sort-by-button-group">
+			<button class="button is-checked" data-sort-value="original-order">original order</button>
+  		<button class="button" data-sort-value="woods">woods</button>
+  		<button class="button" data-sort-value="city">city</button>
+		</div>
+
+			<form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div><br>
@@ -57,79 +64,348 @@
 
 <div class="container" id="grid">
 	<div class="row">
-		<figure>
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<img src="../../unsplash/forest.jpg">
-			<figcaption>
-				hi it me
-			</figcaption>
-		</div>
-	</figure>
-
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<img src="../../unsplash/forest2.jpg">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid woods" data-category="woods">
+			<figure>
+				<a class="md-trigger" data-modal="forest">
+					<img src="img/forest.jpg">
+				</a>
+				<figcaption>
+					<p>some trees</p>
+				</figcaption>
+			</figure>
 		</div>
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<img src="../../unsplash/forest3.jpg">
+		<div class="md-modal md-effect-7" id="forest">
+			<div class="md-content">
+					<img src="img/forest.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
 		</div>
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<img src="../../unsplash/alley.jpg">
+
+
+
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid" data-category="woods">
+			<figure>
+				<a class="md-trigger" data-modal="forest2">
+					<img src="img/forest2.jpg">
+				</a>
+				<figcaption>
+					<p>more trees</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="forest2">
+			<div class="md-content">
+					<img src="img/forest2.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+
+
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid" data-category="woods">
+			<figure>
+				<a class="md-trigger" data-modal="forest3">
+					<img src="img/forest3.jpg">
+				</a>
+				<figcaption>
+					<p>even more trees</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="forest3">
+			<div class="md-content">
+					<img src="img/forest3.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid" data-category="city">
+			<figure>
+				<a class="md-trigger" data-modal="alley">
+					<img src="img/alley.jpg">
+				</a>
+				<figcaption>
+					<p>a nice alleyway</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="alley">
+			<div class="md-content">
+					<img src="img/alley.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+
+	<div class="row">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
+			<figure>
+				<a class="md-trigger" data-modal="pug">
+					<img src="img/pug.jpg">
+				</a>
+				<figcaption>
+					<p>cute doge</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="pug">
+			<div class="md-content">
+					<img src="img/pug.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
+			<figure>
+				<a class="md-trigger" data-modal="bridge">
+					<img src="img/bridge.jpg">
+				</a>
+				<figcaption>
+					<p>let's cross the bridge</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="bridge">
+			<div class="md-content">
+					<img src="img/bridge.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
+			<figure>
+				<a class="md-trigger" data-modal="castle">
+					<img src="img/castle.jpg">
+				</a>
+				<figcaption>
+					<p>look, a castle!</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="castle">
+			<div class="md-content">
+					<img src="img/castle.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
+			<figure>
+				<a class="md-trigger" data-modal="river">
+					<img src="img/river.jpg">
+				</a>
+				<figcaption>
+					<p>a cool river</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="river">
+			<div class="md-content">
+					<img src="img/river.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
 		</div>
 	</div>
 
 	<div class="row">
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<img src="../../unsplash/pug.jpg">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
+			<figure>
+				<a class="md-trigger" data-modal="snow">
+					<img src="img/snow.jpg">
+				</a>
+				<figcaption>
+					<p>it's freezing</p>
+				</figcaption>
+			</figure>
 		</div>
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<img src="../../unsplash/bridge.jpg">
+		<div class="md-modal md-effect-7" id="snow">
+			<div class="md-content">
+					<img src="img/snow.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
 		</div>
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<img src="../../unsplash/castle.jpg">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
+			<figure>
+				<a class="md-trigger" data-modal="waves">
+					<img src="img/waves.jpg">
+				</a>
+				<figcaption>
+					<p>be careful of the high tide</p>
+				</figcaption>
+			</figure>
 		</div>
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<img src="../../unsplash/river.jpg">
+
+		<div class="md-modal md-effect-7" id="waves">
+			<div class="md-content">
+					<img src="img/waves.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
+			<figure>
+				<a class="md-trigger" data-modal="mountains">
+					<img src="img/mountains.jpg">
+				</a>
+				<figcaption>
+					<p>a short mountain</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="mountains">
+			<div class="md-content">
+					<img src="img/mountains.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
+			<figure>
+				<a class="md-trigger" data-modal="hills">
+					<img src="img/hills.jpg">
+				</a>
+				<figcaption>
+					<p>the hills have eyes</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="hills">
+			<div class="md-content">
+					<img src="img/hills.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
 		</div>
 	</div>
 
+
 	<div class="row">
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<img src="../../unsplash/snow.jpg">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
+			<figure>
+				<a class="md-trigger" data-modal="girlriver">
+					<img src="img/girl+river.jpg">
+				</a>
+				<figcaption>
+					<p>a romantic date</p>
+				</figcaption>
+			</figure>
 		</div>
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<img src="../../unsplash/waves.jpg">
+		<div class="md-modal md-effect-7" id="girlriver">
+			<div class="md-content">
+					<img src="img/girl+river.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
 		</div>
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<img src="../../unsplash/mountains.jpg">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
+			<figure>
+				<a class="md-trigger" data-modal="cliff">
+					<img src="img/cliff.jpg">
+				</a>
+				<figcaption>
+					<p>don't fall off</p>
+				</figcaption>
+			</figure>
 		</div>
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<img src="../../unsplash/hills.jpg">
+
+		<div class="md-modal md-effect-7" id="cliff">
+			<div class="md-content">
+					<img src="img/cliff.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
+			<figure>
+				<a class="md-trigger" data-modal="woods">
+					<img src="img/woods.jpg">
+				</a>
+				<figcaption>
+					<p>the light is creeking in</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="woods">
+			<div class="md-content">
+					<img src="img/woods.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
+			<figure>
+				<a class="md-trigger" data-modal="lake">
+					<img src="img/lake.jpg">
+				</a>
+				<figcaption>
+					<p>a pretty blue lake</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="lake">
+			<div class="md-content">
+					<img src="img/lake.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
 		</div>
 	</div>
 
 
+
 	<div class="row">
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<img src="../../unsplash/girl+river.jpg">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
+			<figure>
+				<a class="md-trigger" data-modal="guydog">
+					<img src="img/guy+dog.jpg">
+				</a>
+				<figcaption>
+					<p>a man and his best friend</p>
+				</figcaption>
+			</figure>
 		</div>
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<img src="../../unsplash/cliff.jpg">
+		<div class="md-modal md-effect-7" id="guydog">
+			<div class="md-content">
+					<img src="img/guy+dog.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
 		</div>
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<img src="../../unsplash/woods.jpg">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
+			<figure>
+				<a class="md-trigger" data-modal="beach">
+					<img src="img/beach.jpg">
+				</a>
+				<figcaption>
+					<p>a huge rock</p>
+				</figcaption>
+			</figure>
 		</div>
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			<img src="../../unsplash/lake.jpg">
+
+		<div class="md-modal md-effect-7" id="beach">
+			<div class="md-content">
+					<img src="img/beach.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
 		</div>
 	</div>
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="js/classie.js"></script>
+<script src="js/modaleffects.js"></script>
+<script src="js/isotope.js"></script>
+<script src="js/everything.js"></script>

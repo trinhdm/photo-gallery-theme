@@ -5,23 +5,32 @@
 
 <style>
 figure {
-  /*overflow: hidden;*/
+  overflow: hidden;
   position: absolute;
 }
 
 figure:hover figcaption {
   -webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
+  opacity:1;
+}
+
+figure:hover figcaption p {
+  -webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+  -webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+  -webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
 }
 
 figcaption {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  width: 100%;
   position: relative;
-  top: -52px;
-  height: 3.75em;
-  background: #fff;
+  top: -28px;
+  height: 2em;
+  background: rgba(255,255,255,.9);
   color: #3c4a50;
   -webkit-transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
@@ -30,13 +39,26 @@ figcaption {
 }
 
 figure p {
+  display: inline-block;
   color: green;
-  -webkit-transition: -webkit-transform 0.35s;
-	transition: transform 0.35s;
-	-webkit-transform: translate3d(0,200%,0);
-	transform: translate3d(0,200%,0);
-  padding: 0 1em;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+  position: absolute;
+	bottom: -0.3em;
+	padding: 0 2em;
+	width: 100%;
+	text-transform: uppercase;
+  font: 90% 'Source Sans Pro';
+	opacity: 1;
+	-webkit-backface-visibility: hidden; /* Fix for Chrome 37.0.2062.120 (Mac) */
+  float: left;
 }
+
+figure p.links {
+  float:right;
+  display: inline-block;
+}
+
 .row {overflow:auto; float:left !important;}
 </style>
 
@@ -47,7 +69,13 @@ figure p {
 		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 			<img src="../../unsplash/forest.jpg">
 			<figcaption>
-				<p>hi it me</p>
+				<p>some trees</p>
+
+        <p class="links">
+          <a href="#">a</a>
+          <a href="#">b</a>
+          <a href="#">c</a>
+        </p>
 			</figcaption>
 		</div>
 	</figure>

@@ -20,16 +20,14 @@
   .col-md-3 {
     margin: 0;
     padding: 0;
-    height: 250px;
+    height: 275px;
     object-fit: cover;
   }
-  //
-  // @include tablet {
-  //   .col-sm-6 {
-  //     height: 225px;
-  //   }
-  // }
-  //
+
+  .col-md-4, .col-sm-2, .col-xs-12 {
+    overflow: hidden;
+  }
+
   @include phone {
     .col-xs-12 {
       height: 400px;
@@ -37,41 +35,67 @@
   }
 
   img {
-    display: table-cell;;
+    display: table-cell;
     object-fit: cover;
     width: 100%;
     height: 100%;
     opacity: .8;
     -webkit-filter: grayscale(.5);
     filter: grayscale(.5);
+  }
 
-    &:hover {
+  figure {
+    overflow: hidden;
+    cursor: pointer;
+
+    p {
+      display: inline-block;
+      color: $green;
+    	-webkit-transform: translate3d(0,100%,0);
+    	transform: translate3d(0,100%,0);
+      position: absolute;
+    	bottom: -0.3em;
+    	padding: 0 2em;
+    	width: 100%;
+    	text-transform: uppercase;
+      font: 80% 'Source Sans Pro';
+    	letter-spacing: 1px;
+    	-webkit-backface-visibility: hidden;
+    }
+
+    &:hover img {
       opacity: 1;
       -webkit-filter: grayscale(0);
       filter: grayscale(0);
       @include transition(all .3s ease);
     }
+
+    &:hover figcaption {
+      -webkit-transform: translate3d(0,0,0);
+    	transform: translate3d(0,0,0);
+
+      p {
+        -webkit-transform: translate3d(0,0,0);
+      	transform: translate3d(0,0,0);
+        -webkit-transition: -webkit-transform 0.35s;
+      	transition: transform 0.35s;
+        -webkit-transition-delay: 0.05s;
+      	transition-delay: 0.05s;
+      }
+    }
   }
 
-  // figure {
-  //   overflow: hidden;
-  //   position: absolute;
-  // }
-  //
-  // figcaption {
-  //   -webkit-backface-visibility: hidden;
-  // 	backface-visibility: hidden;
-  //   width: 100%;
-  // 	height: 100%;
-  //   top: auto;
-  // 	bottom: 0;
-  // 	padding: 1em;
-  // 	height: 3.75em;
-  // 	background: #fff;
-  // 	color: #3c4a50;
-  // 	-webkit-transition: -webkit-transform 0.35s;
-  // 	transition: transform 0.35s;
-  // 	-webkit-transform: translate3d(0,100%,0);
-  // 	transform: translate3d(0,100%,0);
-  // }
+  figcaption {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: relative;
+    top: -28px;
+    height: 2em;
+    background: rgba(34,34,34,.9);
+    color: #3c4a50;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+  }
 }

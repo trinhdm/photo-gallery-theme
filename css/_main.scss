@@ -1,3 +1,13 @@
 body {
   background-color: #222;
 }
+
+a {
+  color: $green;
+  text-decoration: none;
+
+  &:hover {
+    color: $olive;
+    text-decoration: none;
+  }
+}
