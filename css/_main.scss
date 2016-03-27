@@ -1,13 +1,23 @@
 body {
-  background-color: #222;
+  background-color: $gray;
 }
 
 a {
-  color: $green;
+  color: $light-gray;
   text-decoration: none;
 
   &:hover {
     color: $olive;
     text-decoration: none;
   }
+}
+
+
+::selection {
+  background: $green; /* WebKit/Blink Browsers */
+  color: $light-gray;
+}
+::-moz-selection {
+  background: $green; /* Gecko Browsers */
+  color: $light-gray;
 }

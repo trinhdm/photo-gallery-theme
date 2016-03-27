@@ -17,52 +17,70 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default" role="navigation" id="vertical">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
+	<div class="container">
+	  <div class="row" style="width: 100%; background-color:#222">
+	  <button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
+		</div>
+	<nav id="vertical" class="menu">
+	  <button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
+	  <div class="menu__wrap">
 
-  </div>
 
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse navbar-ex1-collapse" id="links">
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">About</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery</a>
-        <ul class="dropdown-menu">
-					<li><b>Categories</b></li>
-          <li><a href="#">All</a></li>
-          <li><a href="#">Nature</a></li>
-          <li><a href="#">City</a></li>
-          <li><a href="#">Animals</a></li>
-        </ul>
-      </li>
-			<li><a href="#">Contact</a></li>
+	    <ul data-menu="main" class="menu__level">
+	      <li class="menu__item menu__link"><a href="#" id="about-toggle">About</a></li>
+	      <li class="menu__item"><a class="menu__link" data-submenu="gallery" href="#">Gallery</a></li>
+	      <li class="menu__item menu__link"><a href="#" id="contact-toggle">Contact</a></li>
+	    </ul>
 
-				<li><a href="" class="cat" data-filter="*">All</a></li>
-        <li><a href="" class="cat" data-filter=".foresty">woods</a></li>
-				<li><a href="" class="cat" data-filter=".water">water</a></li>
-        <li><a href="" class="cat" data-filter=".city">city</a></li>
-        <li><a href="" class="cat" data-filter=".animals">animals</a></li>
-				<li><a href="" class="cat" data-filter=".people">people</a></li>
-				<li><a href="" class="cat" data-filter=".food">food</a></li>
 
-			<form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div><br>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-    </ul>
-  </div><!-- /.navbar-collapse -->
-</nav>
+	    <!-- Submenu 2 -->
+	    <ul data-menu="gallery" class="menu__level">
+				<li class="menu__item menu__link"><a href="" class="cat" data-filter="*">All</a></li>
+				<li class="menu__item"><a class="menu__link" href="#" data-submenu="gallery-1">nature</a></li>
+				<li class="menu__item menu__link"><a href="" class="cat" data-filter=".industrial">Industrial</a></li>
+				<li class="menu__item menu__link"><a href="" class="cat" data-filter=".people">people</a></li>
+				<li class="menu__item menu__link"><a href="" class="cat" data-filter=".animals">animals</a></li>
+				<li class="menu__item menu__link"><a href="" class="cat" data-filter=".food">food</a></li>
+	    </ul>
+	    <!-- Submenu 2-1 -->
+	    <ul data-menu="gallery-1" class="menu__level">
+				<li class="menu__item menu__link"><a href="" class="cat" data-filter=".foresty">forests</a></li>
+	      <li class="menu__item menu__link"><a href="" class="cat" data-filter=".water">bodies of water</a></li>
+				<li class="menu__item menu__link"><a href="" class="cat" data-filter=".winter">winter</a></li>
+	    </ul>
+	  </div>
+	</nav>
+	</div>
 
+
+	<div id="about">
+		<h1>Remember my name: A Portfolio Theme for Photographers</h1>
+	    <p>
+				Hi! My name is Doreen Trinh and I'm a junior web developer. This theme was inspired by a very good friend
+				of mine who mentioned that he wanted to get into photography. The theme's title hailed from the band/song
+				that I was listening to while I was typing out this nifty about section (<i>Yuna - Remember My Name</i>).
+			</p>
+			<p>
+				As a photographer, your portfolio is your business card. Having an online prescence to showcase your
+				work is crucial as this world becomes increasingly digitalized. As your online portfolio may be one of
+				the first things you show to potential clients, your website's design is as important as the
+				contents of your portfolio.
+			</p>
+			<p>
+				While wireframing and designing this theme, I wanted it be simple. I didn't want words to
+				swarm the site; rather, I wanted the photos to be the first thing that captured the user's eyes.
+				I thought a grid of photos with hover-over captions perfectly captured the crucial elements that make
+				up a great photography portfolio website design.
+			</p>
+
+			<p>Images from <i>Unsplash.com</i>
+
+	</div>
+
+	<div id="contact">
+		<span><b>Phone:</b> (111)-111-1111</span>
+		<span><b>Mail:</b> doreen@address.here</span>
+	</div>
 
 <div class="container" id="grid">
 	<div class="row">
@@ -92,7 +110,7 @@
 					<img src="img/pug.jpg">
 				</a>
 				<figcaption>
-					<p>cute doge</p>
+					<p>an unhappy, freezing pug</p>
 				</figcaption>
 			</figure>
 		</div>
@@ -104,26 +122,7 @@
 			</div>
 		</div>
 
-
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid food">
-			<figure>
-				<a class="md-trigger" data-modal="food">
-					<img src="img/food.jpg">
-				</a>
-				<figcaption>
-					<p>yummy</p>
-				</figcaption>
-			</figure>
-		</div>
-
-		<div class="md-modal md-effect-7" id="food">
-			<div class="md-content">
-					<img src="img/food.jpg">
-					<button class="md-close">Back to Gallery</button>
-			</div>
-		</div>
-
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid city">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid industrial">
 			<figure>
 				<a class="md-trigger" data-modal="alley">
 					<img src="img/alley.jpg">
@@ -141,6 +140,28 @@
 			</div>
 		</div>
 
+
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid food">
+			<figure>
+				<a class="md-trigger" data-modal="food">
+					<img src="img/food.jpg">
+				</a>
+				<figcaption>
+					<p>freshly baked</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="food">
+			<div class="md-content">
+					<img src="img/food.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+	</div>
+
+
+
 	<div class="row">
 		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid animals">
 			<figure>
@@ -148,7 +169,7 @@
 					<img src="img/bears.jpg">
 				</a>
 				<figcaption>
-					<p>cute bears</p>
+					<p>mama bear and her young ones</p>
 				</figcaption>
 			</figure>
 		</div>
@@ -160,7 +181,7 @@
 			</div>
 		</div>
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid city people">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid industrial people">
 			<figure>
 				<a class="md-trigger" data-modal="shoes">
 					<img src="img/shoes.jpg">
@@ -178,25 +199,25 @@
 			</div>
 		</div>
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid city foresty">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid people winter">
 			<figure>
-				<a class="md-trigger" data-modal="castle">
-					<img src="img/castle.jpg">
+				<a class="md-trigger" data-modal="kiss">
+					<img src="img/kiss.jpg">
 				</a>
 				<figcaption>
-					<p>look, a castle!</p>
+					<p>two lovebirds</p>
 				</figcaption>
 			</figure>
 		</div>
 
-		<div class="md-modal md-effect-7" id="castle">
+		<div class="md-modal md-effect-7" id="kiss">
 			<div class="md-content">
-					<img src="img/castle.jpg">
+					<img src="img/kiss.jpg">
 					<button class="md-close">Back to Gallery</button>
 			</div>
 		</div>
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid foresty water">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid foresty water people">
 			<figure>
 				<a class="md-trigger" data-modal="river">
 					<img src="img/river.jpg">
@@ -234,20 +255,20 @@
 				</div>
 			</div>
 
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid water">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid foresty">
 				<figure>
-					<a class="md-trigger" data-modal="waves">
-						<img src="img/waves.jpg">
+					<a class="md-trigger" data-modal="bridge">
+						<img src="img/bridge.jpg">
 					</a>
 					<figcaption>
-						<p>be careful of the high tide</p>
+						<p>an empty bridge</p>
 					</figcaption>
 				</figure>
 			</div>
 
-			<div class="md-modal md-effect-7" id="waves">
+			<div class="md-modal md-effect-7" id="bridge">
 				<div class="md-content">
-						<img src="img/waves.jpg">
+						<img src="img/bridge.jpg">
 						<button class="md-close">Back to Gallery</button>
 				</div>
 			</div>
@@ -293,7 +314,7 @@
 		<div class="row">
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid people water">
 				<figure>
-					<a class="md-trigger" data-modal="girlriver">
+					<a class="md-trigger" data-modal="aurora">
 						<img src="img/girl+river.jpg">
 					</a>
 					<figcaption>
@@ -309,7 +330,7 @@
 				</div>
 			</div>
 
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid water people">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid water foresty people">
 				<figure>
 					<a class="md-trigger" data-modal="cliff">
 						<img src="img/cliff.jpg">
@@ -327,20 +348,21 @@
 				</div>
 			</div>
 
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid foresty">
+
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid industrial water">
 				<figure>
-					<a class="md-trigger" data-modal="woods">
-						<img src="img/woods.jpg">
+					<a class="md-trigger" data-modal="bike">
+						<img src="img/bike.jpg">
 					</a>
 					<figcaption>
-						<p>the light is creeking in</p>
+						<p>a bike sitting by the river</p>
 					</figcaption>
 				</figure>
 			</div>
 
-			<div class="md-modal md-effect-7" id="woods">
+			<div class="md-modal md-effect-7" id="bike">
 				<div class="md-content">
-						<img src="img/woods.jpg">
+						<img src="img/bike.jpg">
 						<button class="md-close">Back to Gallery</button>
 				</div>
 			</div>
@@ -402,6 +424,237 @@
 						<button class="md-close">Back to Gallery</button>
 				</div>
 			</div>
+
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid winter">
+				<figure>
+					<a class="md-trigger" data-modal="frost">
+						<img src="img/frost.jpg">
+					</a>
+					<figcaption>
+						<p>laden with frost</p>
+					</figcaption>
+				</figure>
+			</div>
+
+			<div class="md-modal md-effect-7" id="frost">
+				<div class="md-content">
+						<img src="img/frost.jpg">
+						<button class="md-close">Back to Gallery</button>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid foresty">
+				<figure>
+					<a class="md-trigger" data-modal="castle">
+						<img src="img/castle.jpg">
+					</a>
+					<figcaption>
+						<p>look, a castle!</p>
+					</figcaption>
+				</figure>
+			</div>
+
+			<div class="md-modal md-effect-7" id="castle">
+				<div class="md-content">
+						<img src="img/castle.jpg">
+						<button class="md-close">Back to Gallery</button>
+				</div>
+			</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid winter foresty">
+			<figure>
+				<a class="md-trigger" data-modal="aurora">
+					<img src="img/aurora.jpg">
+				</a>
+				<figcaption>
+					<p>the northern lights</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="aurora">
+			<div class="md-content">
+					<img src="img/aurora.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid industrial">
+			<figure>
+				<a class="md-trigger" data-modal="escalator">
+					<img src="img/escalator.jpg">
+				</a>
+				<figcaption>
+					<p>a desolate escalator</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="escalator">
+			<div class="md-content">
+					<img src="img/escalator.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid water">
+			<figure>
+				<a class="md-trigger" data-modal="waves">
+					<img src="img/waves.jpg">
+				</a>
+				<figcaption>
+					<p>be careful of the high tide</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="waves">
+			<div class="md-content">
+					<img src="img/waves.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+
+
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid people">
+			<figure>
+				<a class="md-trigger" data-modal="flowers">
+					<img src="img/flowers.jpg">
+				</a>
+				<figcaption>
+					<p>a little girl and some flowers</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="flowers">
+			<div class="md-content">
+					<img src="img/flowers.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid food">
+			<figure>
+				<a class="md-trigger" data-modal="bread">
+					<img src="img/bread.jpg">
+				</a>
+				<figcaption>
+					<p>a delicious appetizer</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="bread">
+			<div class="md-content">
+					<img src="img/bread.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+
+
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid water people">
+			<figure>
+				<a class="md-trigger" data-modal="">
+					<img src="img/boat.jpg">
+				</a>
+				<figcaption>
+					<p>floating along a river</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="boat">
+			<div class="md-content">
+					<img src="img/boat.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+
+
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid industrial people">
+			<figure>
+				<a class="md-trigger" data-modal="paint">
+					<img src="img/paint.jpg">
+				</a>
+				<figcaption>
+					<p>off to paint a masterpiece</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="paint">
+			<div class="md-content">
+					<img src="img/paint.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid winter foresty">
+			<figure>
+				<a class="md-trigger" data-modal="cabin">
+					<img src="img/cabin.jpg">
+				</a>
+				<figcaption>
+					<p>a cabin in the wilderness</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="cabin">
+			<div class="md-content">
+					<img src="img/cabin.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="row">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid industrial">
+			<figure>
+				<a class="md-trigger" data-modal="city">
+					<img src="img/city.jpg">
+				</a>
+				<figcaption>
+					<p>bustling city life</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="city">
+			<div class="md-content">
+					<img src="img/city.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
+
+
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid industrial people">
+			<figure>
+				<a class="md-trigger" data-modal="passion">
+					<img src="img/passion.jpg">
+				</a>
+				<figcaption>
+					<p>passion led us here</p>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="md-modal md-effect-7" id="passion">
+			<div class="md-content">
+					<img src="img/passion.jpg">
+					<button class="md-close">Back to Gallery</button>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -411,3 +664,8 @@
 <script src="js/modaleffects.js"></script>
 <script src="js/isotope.js"></script>
 <script src="js/everything.js"></script>
+
+
+<script src="js/modernizr-custom.js"></script>
+<script src="js/mml-main.js"></script>
+<script src="js/nav.js"></script>

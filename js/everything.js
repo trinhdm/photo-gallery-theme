@@ -6,16 +6,18 @@ function preload(arrayOfImages) {
 
 preload([
     'img/alley.jpg',
+    'img/aurora.jpg',
     'img/beach.jpg',
     'img/bears.jpg',
+    'img/boat.jpg',
+    'img/bread.jpg',
+    'img/bike.jpg',
     'img/bridge.jpg',
     'img/cabin.jpg',
     'img/castle.jpg',
     'img/cliff.jpg',
-    'img/deer.jpg',
-    'img/desert.jpg',
-    'img/desert2.jpg',
     'img/escalator.jpg',
+    'img/flowers.jpg',
     'img/food.jpg',
     'img/forest.jpg',
     'img/frost.jpg',
@@ -26,13 +28,29 @@ preload([
     'img/lake.jpg',
     'img/mountains.jpg',
     'img/ocean-cliffs.jpg',
+    'img/paint.jpg',
+    'img/passion.jpg',
     'img/pug.jpg',
     'img/river.jpg',
     'img/shoes.jpg',
     'img/snow.jpg',
-    'img/waves.jpg',
-    'img/woods.jpg'
+    'img/waves.jpg'
 ]);
+
+
+$(function() {
+   $('a#about-toggle').click(function() {
+      $('#about').slideToggle();
+      return false;
+    });
+  });
+
+  $(function() {
+     $('a#contact-toggle').click(function() {
+        $('#contact').slideToggle();
+        return false;
+      });
+    });
 
 
 $(function() {
