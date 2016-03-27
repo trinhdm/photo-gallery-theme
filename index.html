@@ -45,11 +45,13 @@
       </li>
 			<li><a href="#">Contact</a></li>
 
-			<div class="button-group sort-by-button-group">
-			<button class="button is-checked" data-sort-value="original-order">original order</button>
-  		<button class="button" data-sort-value="woods">woods</button>
-  		<button class="button" data-sort-value="city">city</button>
-		</div>
+				<li><a href="" class="cat" data-filter="*">All</a></li>
+        <li><a href="" class="cat" data-filter=".foresty">woods</a></li>
+				<li><a href="" class="cat" data-filter=".water">water</a></li>
+        <li><a href="" class="cat" data-filter=".city">city</a></li>
+        <li><a href="" class="cat" data-filter=".animals">animals</a></li>
+				<li><a href="" class="cat" data-filter=".people">people</a></li>
+				<li><a href="" class="cat" data-filter=".food">food</a></li>
 
 			<form class="navbar-form navbar-left" role="search">
         <div class="form-group">
@@ -64,7 +66,7 @@
 
 <div class="container" id="grid">
 	<div class="row">
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid woods" data-category="woods">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid foresty">
 			<figure>
 				<a class="md-trigger" data-modal="forest">
 					<img src="img/forest.jpg">
@@ -84,44 +86,44 @@
 
 
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid" data-category="woods">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid animals">
 			<figure>
-				<a class="md-trigger" data-modal="forest2">
-					<img src="img/forest2.jpg">
+				<a class="md-trigger" data-modal="pug">
+					<img src="img/pug.jpg">
 				</a>
 				<figcaption>
-					<p>more trees</p>
+					<p>cute doge</p>
 				</figcaption>
 			</figure>
 		</div>
 
-		<div class="md-modal md-effect-7" id="forest2">
+		<div class="md-modal md-effect-7" id="pug">
 			<div class="md-content">
-					<img src="img/forest2.jpg">
+					<img src="img/pug.jpg">
 					<button class="md-close">Back to Gallery</button>
 			</div>
 		</div>
 
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid" data-category="woods">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid food">
 			<figure>
-				<a class="md-trigger" data-modal="forest3">
-					<img src="img/forest3.jpg">
+				<a class="md-trigger" data-modal="food">
+					<img src="img/food.jpg">
 				</a>
 				<figcaption>
-					<p>even more trees</p>
+					<p>yummy</p>
 				</figcaption>
 			</figure>
 		</div>
 
-		<div class="md-modal md-effect-7" id="forest3">
+		<div class="md-modal md-effect-7" id="food">
 			<div class="md-content">
-					<img src="img/forest3.jpg">
+					<img src="img/food.jpg">
 					<button class="md-close">Back to Gallery</button>
 			</div>
 		</div>
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid" data-category="city">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid city">
 			<figure>
 				<a class="md-trigger" data-modal="alley">
 					<img src="img/alley.jpg">
@@ -140,43 +142,43 @@
 		</div>
 
 	<div class="row">
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid animals">
 			<figure>
-				<a class="md-trigger" data-modal="pug">
-					<img src="img/pug.jpg">
+				<a class="md-trigger" data-modal="bears">
+					<img src="img/bears.jpg">
 				</a>
 				<figcaption>
-					<p>cute doge</p>
+					<p>cute bears</p>
 				</figcaption>
 			</figure>
 		</div>
 
-		<div class="md-modal md-effect-7" id="pug">
+		<div class="md-modal md-effect-7" id="bears">
 			<div class="md-content">
-					<img src="img/pug.jpg">
+					<img src="img/bears.jpg">
 					<button class="md-close">Back to Gallery</button>
 			</div>
 		</div>
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid city people">
 			<figure>
-				<a class="md-trigger" data-modal="bridge">
-					<img src="img/bridge.jpg">
+				<a class="md-trigger" data-modal="shoes">
+					<img src="img/shoes.jpg">
 				</a>
 				<figcaption>
-					<p>let's cross the bridge</p>
+					<p>pretty dangerous</p>
 				</figcaption>
 			</figure>
 		</div>
 
-		<div class="md-modal md-effect-7" id="bridge">
+		<div class="md-modal md-effect-7" id="shoes">
 			<div class="md-content">
-					<img src="img/bridge.jpg">
+					<img src="img/shoes.jpg">
 					<button class="md-close">Back to Gallery</button>
 			</div>
 		</div>
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid city foresty">
 			<figure>
 				<a class="md-trigger" data-modal="castle">
 					<img src="img/castle.jpg">
@@ -194,7 +196,7 @@
 			</div>
 		</div>
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid foresty water">
 			<figure>
 				<a class="md-trigger" data-modal="river">
 					<img src="img/river.jpg">
@@ -214,192 +216,192 @@
 	</div>
 
 	<div class="row">
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
-			<figure>
-				<a class="md-trigger" data-modal="snow">
-					<img src="img/snow.jpg">
-				</a>
-				<figcaption>
-					<p>it's freezing</p>
-				</figcaption>
-			</figure>
-		</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid winter">
+				<figure>
+					<a class="md-trigger" data-modal="snow">
+						<img src="img/snow.jpg">
+					</a>
+					<figcaption>
+						<p>it's freezing</p>
+					</figcaption>
+				</figure>
+			</div>
 
-		<div class="md-modal md-effect-7" id="snow">
-			<div class="md-content">
-					<img src="img/snow.jpg">
-					<button class="md-close">Back to Gallery</button>
+			<div class="md-modal md-effect-7" id="snow">
+				<div class="md-content">
+						<img src="img/snow.jpg">
+						<button class="md-close">Back to Gallery</button>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid water">
+				<figure>
+					<a class="md-trigger" data-modal="waves">
+						<img src="img/waves.jpg">
+					</a>
+					<figcaption>
+						<p>be careful of the high tide</p>
+					</figcaption>
+				</figure>
+			</div>
+
+			<div class="md-modal md-effect-7" id="waves">
+				<div class="md-content">
+						<img src="img/waves.jpg">
+						<button class="md-close">Back to Gallery</button>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid winter">
+				<figure>
+					<a class="md-trigger" data-modal="mountains">
+						<img src="img/mountains.jpg">
+					</a>
+					<figcaption>
+						<p>a short mountain</p>
+					</figcaption>
+				</figure>
+			</div>
+
+			<div class="md-modal md-effect-7" id="mountains">
+				<div class="md-content">
+						<img src="img/mountains.jpg">
+						<button class="md-close">Back to Gallery</button>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid foresty">
+				<figure>
+					<a class="md-trigger" data-modal="hills">
+						<img src="img/hills.jpg">
+					</a>
+					<figcaption>
+						<p>the hills have eyes</p>
+					</figcaption>
+				</figure>
+			</div>
+
+			<div class="md-modal md-effect-7" id="hills">
+				<div class="md-content">
+						<img src="img/hills.jpg">
+						<button class="md-close">Back to Gallery</button>
+				</div>
 			</div>
 		</div>
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
-			<figure>
-				<a class="md-trigger" data-modal="waves">
-					<img src="img/waves.jpg">
-				</a>
-				<figcaption>
-					<p>be careful of the high tide</p>
-				</figcaption>
-			</figure>
-		</div>
 
-		<div class="md-modal md-effect-7" id="waves">
-			<div class="md-content">
-					<img src="img/waves.jpg">
-					<button class="md-close">Back to Gallery</button>
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid people water">
+				<figure>
+					<a class="md-trigger" data-modal="girlriver">
+						<img src="img/girl+river.jpg">
+					</a>
+					<figcaption>
+						<p>a romantic date</p>
+					</figcaption>
+				</figure>
+			</div>
+
+			<div class="md-modal md-effect-7" id="girlriver">
+				<div class="md-content">
+						<img src="img/girl+river.jpg">
+						<button class="md-close">Back to Gallery</button>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid water people">
+				<figure>
+					<a class="md-trigger" data-modal="cliff">
+						<img src="img/cliff.jpg">
+					</a>
+					<figcaption>
+						<p>don't fall off</p>
+					</figcaption>
+				</figure>
+			</div>
+
+			<div class="md-modal md-effect-7" id="cliff">
+				<div class="md-content">
+						<img src="img/cliff.jpg">
+						<button class="md-close">Back to Gallery</button>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid foresty">
+				<figure>
+					<a class="md-trigger" data-modal="woods">
+						<img src="img/woods.jpg">
+					</a>
+					<figcaption>
+						<p>the light is creeking in</p>
+					</figcaption>
+				</figure>
+			</div>
+
+			<div class="md-modal md-effect-7" id="woods">
+				<div class="md-content">
+						<img src="img/woods.jpg">
+						<button class="md-close">Back to Gallery</button>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid water">
+				<figure>
+					<a class="md-trigger" data-modal="lake">
+						<img src="img/lake.jpg">
+					</a>
+					<figcaption>
+						<p>a pretty blue lake</p>
+					</figcaption>
+				</figure>
+			</div>
+
+			<div class="md-modal md-effect-7" id="lake">
+				<div class="md-content">
+						<img src="img/lake.jpg">
+						<button class="md-close">Back to Gallery</button>
+				</div>
 			</div>
 		</div>
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
-			<figure>
-				<a class="md-trigger" data-modal="mountains">
-					<img src="img/mountains.jpg">
-				</a>
-				<figcaption>
-					<p>a short mountain</p>
-				</figcaption>
-			</figure>
-		</div>
 
-		<div class="md-modal md-effect-7" id="mountains">
-			<div class="md-content">
-					<img src="img/mountains.jpg">
-					<button class="md-close">Back to Gallery</button>
+
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid people">
+				<figure>
+					<a class="md-trigger" data-modal="guydog">
+						<img src="img/guy+dog.jpg">
+					</a>
+					<figcaption>
+						<p>a man and his best friend</p>
+					</figcaption>
+				</figure>
 			</div>
-		</div>
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
-			<figure>
-				<a class="md-trigger" data-modal="hills">
-					<img src="img/hills.jpg">
-				</a>
-				<figcaption>
-					<p>the hills have eyes</p>
-				</figcaption>
-			</figure>
-		</div>
-
-		<div class="md-modal md-effect-7" id="hills">
-			<div class="md-content">
-					<img src="img/hills.jpg">
-					<button class="md-close">Back to Gallery</button>
+			<div class="md-modal md-effect-7" id="guydog">
+				<div class="md-content">
+						<img src="img/guy+dog.jpg">
+						<button class="md-close">Back to Gallery</button>
+				</div>
 			</div>
-		</div>
-	</div>
 
-
-	<div class="row">
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
-			<figure>
-				<a class="md-trigger" data-modal="girlriver">
-					<img src="img/girl+river.jpg">
-				</a>
-				<figcaption>
-					<p>a romantic date</p>
-				</figcaption>
-			</figure>
-		</div>
-
-		<div class="md-modal md-effect-7" id="girlriver">
-			<div class="md-content">
-					<img src="img/girl+river.jpg">
-					<button class="md-close">Back to Gallery</button>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid water">
+				<figure>
+					<a class="md-trigger" data-modal="beach">
+						<img src="img/beach.jpg">
+					</a>
+					<figcaption>
+						<p>a huge rock</p>
+					</figcaption>
+				</figure>
 			</div>
-		</div>
 
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
-			<figure>
-				<a class="md-trigger" data-modal="cliff">
-					<img src="img/cliff.jpg">
-				</a>
-				<figcaption>
-					<p>don't fall off</p>
-				</figcaption>
-			</figure>
-		</div>
-
-		<div class="md-modal md-effect-7" id="cliff">
-			<div class="md-content">
-					<img src="img/cliff.jpg">
-					<button class="md-close">Back to Gallery</button>
+			<div class="md-modal md-effect-7" id="beach">
+				<div class="md-content">
+						<img src="img/beach.jpg">
+						<button class="md-close">Back to Gallery</button>
+				</div>
 			</div>
-		</div>
-
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
-			<figure>
-				<a class="md-trigger" data-modal="woods">
-					<img src="img/woods.jpg">
-				</a>
-				<figcaption>
-					<p>the light is creeking in</p>
-				</figcaption>
-			</figure>
-		</div>
-
-		<div class="md-modal md-effect-7" id="woods">
-			<div class="md-content">
-					<img src="img/woods.jpg">
-					<button class="md-close">Back to Gallery</button>
-			</div>
-		</div>
-
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
-			<figure>
-				<a class="md-trigger" data-modal="lake">
-					<img src="img/lake.jpg">
-				</a>
-				<figcaption>
-					<p>a pretty blue lake</p>
-				</figcaption>
-			</figure>
-		</div>
-
-		<div class="md-modal md-effect-7" id="lake">
-			<div class="md-content">
-					<img src="img/lake.jpg">
-					<button class="md-close">Back to Gallery</button>
-			</div>
-		</div>
-	</div>
-
-
-
-	<div class="row">
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
-			<figure>
-				<a class="md-trigger" data-modal="guydog">
-					<img src="img/guy+dog.jpg">
-				</a>
-				<figcaption>
-					<p>a man and his best friend</p>
-				</figcaption>
-			</figure>
-		</div>
-
-		<div class="md-modal md-effect-7" id="guydog">
-			<div class="md-content">
-					<img src="img/guy+dog.jpg">
-					<button class="md-close">Back to Gallery</button>
-			</div>
-		</div>
-
-		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pic-grid">
-			<figure>
-				<a class="md-trigger" data-modal="beach">
-					<img src="img/beach.jpg">
-				</a>
-				<figcaption>
-					<p>a huge rock</p>
-				</figcaption>
-			</figure>
-		</div>
-
-		<div class="md-modal md-effect-7" id="beach">
-			<div class="md-content">
-					<img src="img/beach.jpg">
-					<button class="md-close">Back to Gallery</button>
-			</div>
-		</div>
 	</div>
 </div>
 

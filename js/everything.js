@@ -7,16 +7,22 @@ function preload(arrayOfImages) {
 preload([
     'img/alley.jpg',
     'img/beach.jpg',
+    'img/bears.jpg',
     'img/bridge.jpg',
+    'img/cabin.jpg',
     'img/castle.jpg',
     'img/cliff.jpg',
+    'img/deer.jpg',
     'img/desert.jpg',
+    'img/desert2.jpg',
+    'img/escalator.jpg',
+    'img/food.jpg',
     'img/forest.jpg',
-    'img/forest2.jpg',
-    'img/forest3.jpg',
+    'img/frost.jpg',
     'img/girl+river.jpg',
     'img/guy+dog.jpg',
     'img/hills.jpg',
+    'img/kiss.jpg',
     'img/lake.jpg',
     'img/mountains.jpg',
     'img/ocean-cliffs.jpg',
@@ -29,26 +35,31 @@ preload([
 ]);
 
 
-
-var $grid = $('.grid').isotope({
-  // options...
-  itemSelector: '.pic-grid',
-  getSortData: {
-    name: '.name',
-    category: '[data-category]'
-  },
-});
-
-$('.sort-by-button-group').on( 'click', 'button', function() {
-    var sortValue = $(this).attr('data-sort-value');
-    $grid.isotope({ sortBy: sortValue });
+$(function() {
+  var $grid = $('#grid').isotope({
+    itemSelector: '.pic-grid',
+    percentPosition: true,
+    filter: '*',
+    transitionDuration: '0.8s',
+    // only opacity for reveal/hide transition
+    hiddenStyle: {
+      opacity: 0
+    },
+    visibleStyle: {
+      opacity: 1
+    }
   });
 
-  // change is-checked class on buttons
-  $('.button-group').each( function( i, buttonGroup ) {
-    var $buttonGroup = $( buttonGroup );
-    $buttonGroup.on( 'click', 'button', function() {
-      $buttonGroup.find('.is-checked').removeClass('is-checked');
-      $( this ).addClass('is-checked');
+  $('.cat').click(function(){
+    var selector = $(this).attr('data-filter');
+    $grid.isotope({
+        filter: selector,
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false,
+        }
     });
-  });
+  return false;
+});
+});
