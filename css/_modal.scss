@@ -1,7 +1,7 @@
 button {
 	border: none;
 	padding: 0.6em 2.2em;
-	background: $gray;
+	background: $dark-gray;
 	color: $green;
 	font-family: $body-font;
 	font-size: 0.9em;
@@ -24,9 +24,6 @@ button {
 
 .md-perspective body  {
 	background: #222;
-	// -webkit-perspective: 600px;
-	// -moz-perspective: 600px;
-	// perspective: 600px;
 }
 
 .md-modal {
@@ -73,14 +70,14 @@ button {
 	visibility: visible;
 }
 
-/* Content styles */
+
 .md-content {
+	border: 1px solid $dark-gray;
   overflow: auto;
 	color: #fff;
-	background: #121212;
+	background: $gray;
   padding: 2em;
 	position: relative;
-	border-radius: 3px;
 	margin: 0 auto;
 
   img {
@@ -130,26 +127,26 @@ button {
 	margin: 2em auto 0 auto;
 }
 
-.md-effect-7{
+.sliding {
 	top: 0;
 	-webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
+
+	.md-content {
+		-webkit-transform: translateY(-200%);
+		-moz-transform: translateY(-200%);
+		-ms-transform: translateY(-200%);
+		transform: translateY(-200%);
+		-webkit-transition: all .3s;
+		-moz-transition: all .3s;
+		transition: all .3s;
+		opacity: 0;
+	}
 }
 
-.md-effect-7 .md-content {
-	-webkit-transform: translateY(-200%);
-	-moz-transform: translateY(-200%);
-	-ms-transform: translateY(-200%);
-	transform: translateY(-200%);
-	-webkit-transition: all .3s;
-	-moz-transition: all .3s;
-	transition: all .3s;
-	opacity: 0;
-}
-
-.md-show.md-effect-7 .md-content {
+.md-show.sliding .md-content {
 	-webkit-transform: translateY(0%);
 	-moz-transform: translateY(0%);
 	-ms-transform: translateY(0%);

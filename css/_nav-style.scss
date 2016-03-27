@@ -1,24 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Oxygen:400,300|Source+Sans+Pro:400,300);
-
-
-body {
-  background-color: #222;
-}
-
-
-
-
-/* General Blueprint Style */
-
-
-@font-face {
-	font-family: 'feather';
-	font-weight: normal;
-	font-style: normal;
-	src: url('../fonts/feather/feather.eot?1gafuo');
-	src: url('../fonts/feather/feather.eot?1gafuo#iefix') format('embedded-opentype'), url('../fonts/feather/feather.woff2?1gafuo') format('woff2'), url('../fonts/feather/feather.ttf?1gafuo') format('truetype'), url('../fonts/feather/feather.woff?1gafuo') format('woff'), url('../fonts/feather/feather.svg?1gafuo#feather') format('svg');
-}
-
 .icon {
 	font-family: 'feather';
 	font-weight: normal;
@@ -44,16 +23,13 @@ body {
 	content: '\e117';
 }
 
-
-/* Menu styles */
-
 .menu {
 	position: fixed;
 	left: 0;
   top: 0;
 	width: 175px;
 	height: 100vh;
-  background-color: #121212;
+  background-color: $dark-gray;
 }
 
 .menu__wrap {
@@ -124,7 +100,6 @@ body {
   text-decoration: none;
   font-weight: 600;
 }
-
 
 [class^='animate-'],
 [class*=' animate-'] {
@@ -240,40 +215,40 @@ body {
 	line-height: 1;
 	position: relative;
 	padding: 2.5em 3.75em 1.5em 1.3em;
-}
 
-.menu__breadcrumbs a {
-	font-weight: bold;
-	display: inline-block;
-	cursor: pointer;
-	vertical-align: middle;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	color: $green;
-  margin-bottom: 2px;
-}
+  a {
+  	font-weight: bold;
+  	display: inline-block;
+  	cursor: pointer;
+  	vertical-align: middle;
+  	letter-spacing: 1px;
+  	text-transform: uppercase;
+  	color: $green;
+    margin-bottom: 2px;
 
-.menu__breadcrumbs a:last-child {
-	pointer-events: none;
-  position: relative;
-  top:1px;
-}
+    &:last-child {
+    	pointer-events: none;
+      position: relative;
+      top:1px;
+    }
 
-.menu__breadcrumbs a:hover {
-	color: $green;
-  text-decoration: none;
-}
+    &:hover {
+    	color: $green;
+      text-decoration: none;
+    }
 
-.menu__breadcrumbs a:not(:last-child)::after {
-	content: '\e902';
-	font-family: 'feather';
-	display: inline-block;
-	padding: 0 0.5em;
-	color: $olive;
-}
+    &:not(:last-child)::after {
+    	content: '\e902';
+    	font-family: 'feather';
+    	display: inline-block;
+    	padding: 0 0.5em;
+    	color: $olive;
+    }
 
-.menu__breadcrumbs a:not(:last-child):hover::after {
-	color: $olive;
+    &:not(:last-child):hover::after {
+    	color: $olive;
+    }
+  }
 }
 
 .menu__back {
@@ -312,10 +287,10 @@ body {
 	cursor: pointer;
 	border: none;
 	background: none;
-}
 
-.action:focus {
-	outline: none;
+  &:focus {
+  	outline: none;
+  }
 }
 
 .action--open {

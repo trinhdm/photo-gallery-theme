@@ -41,16 +41,16 @@ preload([
 $(function() {
    $('a#about-toggle').click(function() {
       $('#about').slideToggle();
+      $('#about-toggle').removeClass('menu__link--current').css({'color':'#bdbdbd'});
       return false;
     });
-  });
 
-  $(function() {
-     $('a#contact-toggle').click(function() {
-        $('#contact').slideToggle();
-        return false;
-      });
-    });
+    $('a#contact-toggle').click(function() {
+       $('#contact').slideToggle();
+       $('#contact-toggle').removeClass('menu__link--current').css({'color':'#bdbdbd'});
+       return false;
+     });
+  });
 
 
 $(function() {
@@ -80,4 +80,12 @@ $(function() {
     });
   return false;
 });
+});
+
+
+var $body = $("body");
+
+$(document).on({
+    ajaxStart: function() { $body.addClass("loading");    },
+     ajaxStop: function() { $body.removeClass("loading"); }
 });
