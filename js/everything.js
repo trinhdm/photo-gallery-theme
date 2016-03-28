@@ -50,7 +50,41 @@ $(function() {
        $('#contact-toggle').removeClass('menu__link--current').css({'color':'#bdbdbd'});
        return false;
      });
-  });
+
+    if ($('div').hasClass('animals')) {
+       $('.animals img').addClass('fade-grid animalsfade');
+    }
+
+    if ($('div').hasClass('yummy')) {
+       $('.yummy img').addClass('fade-grid yumfade');
+    }
+
+    if ($('div').hasClass('foresty')) {
+       $('.foresty img').addClass('fade-grid woodfade');
+    }
+
+    if($('div').hasClass('watery')) {
+       $('.watery img').addClass('fade-grid waterfade');
+    }
+
+    if($('div').hasClass('people')) {
+       $('.people img').addClass('fade-grid peoplefade');
+    }
+
+    if($('div').hasClass('industrial')) {
+       $('.industrial img').addClass('fade-grid cityfade');
+    }
+
+    if($('div').hasClass('winter')) {
+       $('.winter img').addClass('fade-grid winterfade');
+    }
+
+    ($('.menu__breadcrumbs a:first-child').on('click', function() {
+      ($('.menu__breadcrumbs a:not(:first-child)').addClass('fadingOut'));
+    })
+  );
+});
+
 
 
 $(function() {
@@ -79,13 +113,5 @@ $(function() {
         }
     });
   return false;
-});
-});
-
-
-var $body = $("body");
-
-$(document).on({
-    ajaxStart: function() { $body.addClass("loading");    },
-     ajaxStop: function() { $body.removeClass("loading"); }
+  });
 });

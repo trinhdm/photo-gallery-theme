@@ -82,12 +82,29 @@ button {
 
   img {
     width: auto !important;
-    height: 75% !important;
+    height: 80vh !important;
     margin: 0 auto !important;
     opacity: 1 !important;
     -webkit-filter: grayscale(0) !important;
     filter: grayscale(0) !important;
+
+		@include phone {
+			width: 80vw !important;
+	    height: auto !important;
+		}
   }
+
+	@-moz-document url-prefix() {
+    img {
+      height: 80vh !important;
+			width: auto !important;
+
+			@include phone {
+				width: 80vw !important;
+		    height: auto !important;
+			}
+    }
+	}
 }
 
 .md-content h3 {

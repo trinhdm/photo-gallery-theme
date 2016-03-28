@@ -9,7 +9,7 @@
 
 
 
-/* FONTS/COLORS
+/* FONTS/COLORS/KEYFRAMES
 ============================================= */
 
 $title-font: 'Oxygen', Helvetica, sans-serif;
@@ -24,6 +24,16 @@ $dark-gray: #121212;
 
 
 
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+@-webkit-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@-moz-keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+@keyframes fadeOut { from { opacity:1; } to { opacity:0; } }
+
+
+
 /* REGULAR MIXINS
 ============================================= */
 
@@ -35,6 +45,26 @@ $dark-gray: #121212;
   transition: $args;
 }
 
+
+@mixin fading($args, $direction, $time...) {
+	-webkit-animation: $args;
+	-moz-animation: $args;
+	animation: $args;
+
+	-webkit-animation-fill-mode: $direction;
+	-moz-animation-fill-mode: $direction;
+	animation-fill-mode: $direction;
+
+	-webkit-animation-duration: $time;
+	-moz-animation-duration: $time;
+	animation-duration: $time;
+}
+
+@mixin animation-delay($args...) {
+	-webkit-animation-delay: $args;
+	-moz-animation-delay: $args;
+	animation-delay: $args;
+}
 
 
 /* MIXINS FOR RESPONSIVENESS

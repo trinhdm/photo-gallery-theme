@@ -98,4 +98,37 @@
     -webkit-transform: translate3d(0,100%,0);
     transform: translate3d(0,100%,0);
   }
+
+  .fade-grid {
+    opacity:0;  /* make things invisible upon start */
+    @include fading(fadeIn ease-in 1, forwards, 1s);
+  }
+
+  .animalsfade, .fading {
+    @include animation-delay(.25s);
+  }
+
+  .woodfade {
+    @include animation-delay(.5s);
+  }
+
+  .yumfade {
+    @include animation-delay(.7s);
+  }
+
+  .peoplefade {
+    @include animation-delay(.9s);
+  }
+
+  .waterfade {
+    @include animation-delay(1.15s);
+  }
+
+  .winterfade {
+    @include animation-delay(1.3s);
+  }
+
+  .cityfade {
+    @include animation-delay(1.6s);
+  }
 }
