@@ -21,22 +21,23 @@ function openMenu() {
 
 function closeMenu() {
   classie.remove(menuEl, 'menu--open');
-	$('#about').slideUp();
+	// $('#about').animate({width:'toggle'}, 100);
+  $('#about').slideUp();
   $('#contact').slideUp();
 }
 
 // simulate grid content loading
-var gridWrapper = document.querySelector('.content');
-
-function loadDummyData(ev, itemName) {
-  ev.preventDefault();
-
-  closeMenu();
-  gridWrapper.innerHTML = '';
-  classie.add(gridWrapper, 'content--loading');
-  setTimeout(function() {
-    classie.remove(gridWrapper, 'content--loading');
-    gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
-  }, 700);
-}
+// var gridWrapper = document.querySelector('.content');
+//
+// function loadDummyData(ev, itemName) {
+//   ev.preventDefault();
+//
+//   closeMenu();
+//   gridWrapper.innerHTML = '';
+//   classie.add(gridWrapper, 'content--loading');
+//   setTimeout(function() {
+//     classie.remove(gridWrapper, 'content--loading');
+//     gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
+//   }, 700);
+// }
 })();

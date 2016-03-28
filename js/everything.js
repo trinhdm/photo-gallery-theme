@@ -39,17 +39,34 @@ preload([
 
 
 $(function() {
-   $('a#about-toggle').click(function() {
-      $('#about').slideToggle();
-      $('#about-toggle').removeClass('menu__link--current').css({'color':'#bdbdbd'});
-      return false;
-    });
+  $('a#about-toggle').click(function() {
+     $('#about').slideToggle();
+     $('#about-toggle').removeClass('menu__link--current').css({'color':'#bdbdbd'});
+     $('#contact').slideUp();
+     return false;
+   });
 
-    $('a#contact-toggle').click(function() {
-       $('#contact').slideToggle();
-       $('#contact-toggle').removeClass('menu__link--current').css({'color':'#bdbdbd'});
-       return false;
-     });
+  $('a#contact-toggle').click(function() {
+     $('#contact').slideToggle();
+     $('#contact-toggle').removeClass('menu__link--current').css({'color':'#bdbdbd'});
+     $('#about').slideUp();
+     return false;
+   });
+
+    $(window).resize(function() {
+      if ($(window).width() < 768) {
+        $('#contact').slideUp();
+        $('#about').slideUp();
+
+        $('a#about-toggle').click(function() {
+          $('#contact').slideUp();
+        });
+
+        $('a#contact-toggle').click(function() {
+          $('#about').slideUp();
+        });
+      }
+    });
 
     if ($('div').hasClass('animals')) {
        $('.animals img').addClass('fade-grid animalsfade');

@@ -300,8 +300,22 @@
   }
 }
 
+.mobile-nav {
+	display: none;
+	width: 100%;
+	background-color:#222;
+	opacity: .9;
+	position: fixed;
+	z-index: 1000;
+	height: 70px;
+
+	@include phone {
+		display: block;
+	}
+}
+
 .action--open {
-	font-size: 2.25em;
+	font-size: 2em;
 	top: .75em;
 	left: .75em;
 	display: none;
